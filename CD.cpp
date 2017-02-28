@@ -5,6 +5,8 @@ Project 11 - CD - UVa #11849
 Programming Techiques - Simpson
 February 27, 2017
 
+Uses set STL container. Prints the number of shared
+values between two sets of input.
 *////////////////////////////////////////////////
 
 #include <iostream>
