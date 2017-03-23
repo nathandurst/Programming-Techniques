@@ -10,9 +10,10 @@ March 1, 2017
 #include <iostream>
 #include <bitset>
 #include <vector>
+#include <cstdint>
 using namespace std;
 
-typedef::_Longlong ll;
+typedef uint32_t ll;
 ll _sieve_size;
 bitset<10000010> bs;
 vector<int> primes;
@@ -35,7 +36,7 @@ void sieve(ll upperbound)
 
 bool isPrime(int n)
 {
-	for (int i = 0; i < primes.size(); i++)
+	for (int i = 0; i < primes.size() && primes[i] <= n; i++)
 	{
 		if (n == primes[i])
 			return true;
