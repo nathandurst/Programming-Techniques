@@ -42,7 +42,7 @@ int main()
 			{
 				top = Q.front();
 				Q.pop();
-				for (i = 1; i <= graph[top][0]; i++)
+				for (i = 0; i < graph[top].size(); i++)
 				{
 					v = graph[top][i];
 					if (!accessible[v])
