@@ -11,14 +11,9 @@ April 3, 2017
 using namespace std;
 bool accessible[100];
 
-int BFS(int v)
-{
-
-}
-
 int main()
 {
-	int size, v, i, front, checksize, isize;
+	int size, v, w, i, front, top, checksize, isize;
 	cin >> size;
 	while (size != 0)
 	{
@@ -41,22 +36,35 @@ int main()
 		{
 			cin >> v;
 			bool accessible[100] = { false };
-			v = size - BFS(v);
-
-
-
-
-			isize = Q.size();
-			cout << isize << " ";
-			for (i = 0; i < isize; i++)
+			queue<int> Q;
+			Q.push(v); w = 0;
+			while (!Q.empty())
 			{
-				cout << Q.front() << " ";
+				top = Q.front();
 				Q.pop();
+				for (i = 1; i <= graph[top][0]; i++)
+				{
+					v = graph[top][i];
+					if (!accessible[v])
+					{
+						w++;
+						accessible[v] = true;
+						Q.push(v);
+					}
+				}
 			}
+			w = size - w;
+			cout << v;
+			if (v != 0)
+				for (i = 1; i < size; i++)
+				{
+					if (!accessible[i])
+						cout << " " << i;
+				}			
 			cout << '\n';
 			checksize--;
 		}
 		cin >> size;
-		
+
 	}
 }
