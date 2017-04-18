@@ -7,14 +7,21 @@ April 3, 2017
 
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
+bool accessible[100];
+
+int BFS(int v)
+{
+
+}
 
 int main()
 {
-	int size, v, i, j, k, checksize;
-	while (!cin.eof())
+	int size, v, i, front, checksize, isize;
+	cin >> size;
+	while (size != 0)
 	{
-		cin >> size;
 		vector<vector<int>> graph(size + 1);
 
 		cin >> i;
@@ -33,30 +40,23 @@ int main()
 		while (checksize != 0)
 		{
 			cin >> v;
-			vector<int> inaccessible(graph[v].size());
-			int isize = 0;
-			for (i = 0; i < graph[v].size(); i++)
-			{
-				for (k = 1; k < size + 1; k++)
-				{
-					if (graph[v][i] != k)
-					{
-						cout << v << " does not connect to " << k << '\n';
-						inaccessible.push_back(k);
-						isize++;
-					}
-				}
+			bool accessible[100] = { false };
+			v = size - BFS(v);
 
-			}
-			//inaccessible.resize(isize);
-			cout << inaccessible.size() << " ";
+
+
+
+			isize = Q.size();
+			cout << isize << " ";
 			for (i = 0; i < isize; i++)
 			{
-				cout << inaccessible[i] << " ";
+				cout << Q.front() << " ";
+				Q.pop();
 			}
 			cout << '\n';
 			checksize--;
 		}
+		cin >> size;
 		
 	}
 }
