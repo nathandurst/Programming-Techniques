@@ -52,6 +52,7 @@ int main()
 						Q.push(v);
 					}
 				}
+<<<<<<< HEAD
 			}
 			w = size - w;
 			cout << w;
@@ -60,7 +61,17 @@ int main()
 			{
 				if (!accessible[i])
 					cout << " " << i;
+=======
+>>>>>>> 91a5c533ead89d2ade1e5dd6470c2fd62f53c591
 			}
+			w = size - w;
+			cout << v;
+			if (v != 0)
+				for (i = 1; i < size; i++)
+				{
+					if (!accessible[i])
+						cout << " " << i;
+				}			
 			cout << '\n';
 			checksize--;
 		}
