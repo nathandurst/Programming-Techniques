@@ -47,9 +47,9 @@ int main()
 					v = graph[top][i];
 					if (!accessible[v])
 					{
-						w++;
 						accessible[v] = true;
 						Q.push(v);
+						w++;
 					}
 				}
 			}
