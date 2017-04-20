@@ -1,4 +1,9 @@
-//10986
+/*////////////////////////////////////////////////
+Nathan Durst	:	nadurst0303
+Project 24 - Sending Email - UVa #10986
+Programming Techiques - Simpson
+April 17, 2017
+*////////////////////////////////////////////////
 
 #include <iostream>
 #include <vector>
