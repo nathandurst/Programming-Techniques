@@ -1,5 +1,5 @@
 /*////////////////////////////////////////////////
-Nathan Durst	:	nadurst0303
+Nathan Durst	:	nathandurst
 Project 23 - Vertex - UVa #280
 Programming Techiques - Simpson
 April 3, 2017
