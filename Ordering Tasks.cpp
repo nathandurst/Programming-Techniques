@@ -6,7 +6,6 @@ April 20, 2017
 *////////////////////////////////////////////////
 #include <iostream>
 #include <vector>
-#include <queue>
 #define MAX 101
 using namespace std;
 vector<int> f;
