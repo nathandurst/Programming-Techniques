@@ -1,5 +1,5 @@
 /*////////////////////////////////////////////////
-Nathan Durst	:	nadurst0303
+Nathan Durst	:	nathandurst
 Project 24 - Sending Email - UVa #10986
 Programming Techiques - Simpson
 April 17, 2017
@@ -33,7 +33,7 @@ int main()
 		}
 		int x[20005];
 		for (int j = 0; j < n; j++)
-			x[j] = 1e9;
+			x[j] = 1B;
 		x[S] = 0;
 		q.empty();
 		q.push(S);
