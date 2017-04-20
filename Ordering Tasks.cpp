@@ -1,5 +1,5 @@
 /*////////////////////////////////////////////////
-Nathan Durst	:	nadurst0303
+Nathan Durst	:	nathandurst
 Project 25 - Ordering Tasks - UVa #10305
 Programming Techiques - Simpson
 April 20, 2017
