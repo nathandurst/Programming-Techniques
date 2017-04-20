@@ -64,11 +64,13 @@ int main()
 			w = size - w;
 			cout << v;
 			if (v != 0)
+			{
 				for (i = 1; i < size; i++)
 				{
 					if (!accessible[i])
 						cout << " " << i;
-				}			
+				}
+			}
 			cout << '\n';
 			checksize--;
 		}
