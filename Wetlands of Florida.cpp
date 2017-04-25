@@ -1,4 +1,11 @@
-//469
+/*////////////////////////////////////////////////
+
+Nathan Durst	:	nadurst0303
+Project 26 - Wetlands of Florida - UVa #469
+Programming Techiques - Simpson
+April 24, 2017
+
+*////////////////////////////////////////////////
 #include <iostream>
 #include <vector>
 #include <string>
