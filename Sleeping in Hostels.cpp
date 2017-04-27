@@ -1,4 +1,11 @@
-//13181
+/*////////////////////////////////////////////////
+
+Nathan Durst	:	nadurst0303
+Project 27 - Sleeping in Hostels - UVa 13181
+Programming Techiques - Simpson
+April 26, 2017
+
+*////////////////////////////////////////////////
 #include <iostream>
 #include <vector>
 #include <string>
@@ -7,47 +14,42 @@ using namespace std;
 int main()
 {
 	string line;
-	vector<char> v;
-	int i, j, bed, dist;
+	int i, j, dist, cnt;
 	while (!cin.eof())
 	{
 		cin >> line;
-		cout << line << '\n';
-		/*i = j = 0;
-		while (j < line.size())
-		{
-			while (line[i] != 'X' && i != line.size())
-			{
-				i++;
-			}
-			j = i;
-			i++;
-			if (j != line.size())
-				cout << j << '\n';
-		}*/
+		//cout << line << '\n';		
 
-		v.resize(line.size() + 1);
-		for (i = 1; i < v.size(); i++)
+		dist = 0; cnt = 0;
+		for (i = 0; i < line.size(); i++)
 		{
-			v[i] = line[i - 1];
-			cout << v[i];
-		}
-		cout << '\n';
-		bed = 1;// dist = 0;
-		for (i = 1; i < v.size(); i++)
-		{
-			dist = 0;
-			if (v[i] == 'X')
+			j = i;
+			if (line[i] == '.')
 			{
-				cout << i << '\n';
-				if (i - bed > dist)
+				cnt = 0;
+				while (line[i] == '.')
 				{
-					dist = i - bed;
-					bed = i;
-					cout << dist - 1 << '\n';
+					cnt++;
+					i++;
 				}
+				cnt = cnt - 1;
+				
+			}
+			if (j == 0 || (i == line.size()))
+			{
+				if (cnt >= dist)
+					dist = cnt;
+			}
+			else
+			{
+				if (cnt/2 > dist)
+					dist = cnt/2;
 			}
 		}
+
+		cout << dist;
+		if (!cin.eof())
+			cout << '\n';		
 	}
 
 	return 0;
