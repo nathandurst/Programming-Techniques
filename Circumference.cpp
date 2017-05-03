@@ -27,7 +27,7 @@ int main()
 		b = dist(x2, y2, x3, y3);
 		c = dist(x3, y3, x1, y1);
 
-		//perimeter = a + b + c;
+		//semiperimeter
 		s = (a + b + c) / 2;
 		area = sqrt(s * (s - a) * (s - b) * (s - c));
 		radius = (a*b*c) / (4 * area);

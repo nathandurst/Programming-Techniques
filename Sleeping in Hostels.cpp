@@ -17,8 +17,7 @@ int main()
 	int i, j, dist, cnt;
 	while (!cin.eof())
 	{
-		cin >> line;
-		//cout << line << '\n';		
+		cin >> line;		
 
 		dist = 0; cnt = 0;
 		for (i = 0; i < line.size(); i++)
